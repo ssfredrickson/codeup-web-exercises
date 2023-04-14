@@ -12,6 +12,7 @@ function rentalPrice() {
   let day = 3;
   return (Number(mermaid) + Number(brotherBear) + Number(hercules)) * day;
 }
+
 document.getElementById("buttonOne").onclick = function () {
   alert("Your rental total is " + "$" + rentalPrice() + ".00");
 };
@@ -56,6 +57,7 @@ function schedule() {
     alert("Sorry you may not attend this class");
   }
 }
+
 document.getElementById("buttonThree").onclick = function () {
   schedule();
 };
@@ -63,12 +65,13 @@ document.getElementById("buttonThree").onclick = function () {
 // Question 4
 // -A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.  Premium members do not need to buy a specific amount of products.
 function discount() {
+  let offer = confirm("Is the discount offer still valid?");
   let premium = confirm(
     'Are you a Premium member? "Ok" for "Yes", "Cancel" for "No"'
   );
   let itemsPurchases = prompt("How many items did you purchase?");
 
-  if (premium === true || Number(itemsPurchases) > 2) {
+  if ((premium === true || Number(itemsPurchases) > 2) && offer === true) {
     alert("Please enjoy your discount");
   } else {
     alert(
@@ -76,6 +79,7 @@ function discount() {
     );
   }
 }
+
 document.getElementById("buttonFour").onclick = function () {
   discount();
 };
