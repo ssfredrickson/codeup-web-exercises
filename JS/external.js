@@ -26,22 +26,22 @@ document.getElementById("buttonOne").onclick = function () {
 // Question 2
 
 function work() {
-  let google = 400;
-  let amazon = 380;
-  let facebook = 350;
-  let facebookHours = 10;
-  let googleHours = 6;
-  let amazonHours = 4;
+  let google = prompt('What was your hourly rate at Google?');
+  let amazon = prompt('What was your hourly rate at Amazon?');
+  let facebook = prompt('What was your hourly rate at Facebook?');
+  let facebookHours = prompt('How many hours did you work at Facebook last week?');
+  let googleHours = prompt('How many hours did you work at Google last week?');
+  let amazonHours = prompt('How many hours did you work at Amazon last week?');
 
-  let total =
-    google * googleHours + amazon * amazonHours + (facebook + facebookHours);
-  return total;
+    let total =
+        (Number(google) * Number(googleHours)) + (Number(amazon) * Number(amazonHours)) + (Number(facebook) + Number(facebookHours));
+    return total;
 }
+
 
 document.getElementById("buttonTwo").onclick = function () {
   alert("Do you remember how much money you made last week.");
-  alert("The total you earned last week was $" + work());
-  console.log("Work total: " + work());
+  alert("Fine, ill add it up for you! The total you earned last week was $" + work());
 };
 
 // Question 3
@@ -58,7 +58,7 @@ function schedule() {
   }
 }
 document.getElementById("buttonThree").onclick = function () {
-    schedule();
+  schedule();
 };
 //     -A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.  Premium members do not need to buy a specific amount of products.
 
@@ -79,6 +79,5 @@ function discount() {
   }
 }
 document.getElementById("buttonFour").onclick = function () {
-    discount();
+  discount();
 };
-
