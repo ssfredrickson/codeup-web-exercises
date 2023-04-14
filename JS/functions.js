@@ -1,6 +1,7 @@
 "use strict";
 
 /**
+ * ! Solution Below
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
@@ -14,6 +15,7 @@ function sayHello(name) {
 }
 
 /**
+ * ! Solution Below
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
@@ -25,6 +27,7 @@ let helloMessage = sayHello("Stephen");
 console.log(helloMessage);
 
 /**
+ * ! Solution Below
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
@@ -35,13 +38,14 @@ console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor(Math.random() * 3 + 1);
+let random = Math.floor(Math.random() * 3 + 1);
 function isTwo(x) {
   return x === 2;
 }
 
 console.log(isTwo(random));
 /**
+ * ! Solution Above
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
  * The function should return a boolean value based on whether or not the passed
@@ -60,6 +64,7 @@ console.log(isTwo(random));
  */
 
 /**
+ * ! Solution Below
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
  * restaurant. The function should accept a tip percentage and the total of the
@@ -83,6 +88,7 @@ console.log(tip);
 
 calculateTip(total, tip)
 /**
+ * ! Solution Above
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
@@ -90,6 +96,7 @@ calculateTip(total, tip)
  */
 
 /**
+ * ! Solution Below
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
  * (before a discount is applied), and a discount percentage (a number between 0
