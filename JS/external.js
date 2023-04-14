@@ -10,8 +10,7 @@ function rentalPrice() {
   let brotherBear = prompt("How man days for Brother Bear?");
   let hercules = prompt("How many days for Hercules?");
   let day = 3;
-  let price = (Number(mermaid) + Number(brotherBear) + Number(hercules)) * day;
-  return price;
+  return (Number(mermaid) + Number(brotherBear) + Number(hercules)) * day;
 }
 document.getElementById("buttonOne").onclick = function () {
   alert("Your rental total is " + "$" + rentalPrice() + ".00");
@@ -29,11 +28,11 @@ function work() {
   let googleHours = prompt("How many hours did you work at Google last week?");
   let amazonHours = prompt("How many hours did you work at Amazon last week?");
 
-  let total =
+  return (
     Number(google) * Number(googleHours) +
     Number(amazon) * Number(amazonHours) +
-    (Number(facebook) + Number(facebookHours));
-  return total;
+    (Number(facebook) + Number(facebookHours))
+  );
 }
 
 document.getElementById("buttonTwo").onclick = function () {
