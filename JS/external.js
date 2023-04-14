@@ -1,0 +1,84 @@
+// Write some JavaScript code, that is, variables and operators, to describe the following scenarios. Do not worry about the real operations to get the values, the goal of these exercises is to understand how real world conditions can be represented with code.
+//
+//     -You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is $3, how much will you have to pay?
+//     -Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
+// -A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
+//     -A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.  Premium members do not need to buy a specific amount of products.
+console.log("Hello from external JavaScript");
+let color = prompt("whats your favorite color?");
+alert(color + " is a good color, not the best color, but good.");
+
+// 1st Question
+alert("Press a button to explore the questions.");
+
+function rentalPrice() {
+  let mermaid = prompt("How many days for Little Mermaid?");
+  let brotherBear = prompt("How man days for Brother Bear?");
+  let hercules = prompt("How many days for Hercules?");
+  let day = 3;
+  let price = (Number(mermaid) + Number(brotherBear) + Number(hercules)) * day;
+  return price;
+}
+document.getElementById("buttonOne").onclick = function () {
+  alert("Your rental total is " + "$" + rentalPrice() + ".00");
+};
+
+// Question 2
+
+function work() {
+  let google = 400;
+  let amazon = 380;
+  let facebook = 350;
+  let facebookHours = 10;
+  let googleHours = 6;
+  let amazonHours = 4;
+
+  let total =
+    google * googleHours + amazon * amazonHours + (facebook + facebookHours);
+  return total;
+}
+
+document.getElementById("buttonTwo").onclick = function () {
+  alert("Do you remember how much money you made last week.");
+  alert("The total you earned last week was $" + work());
+  console.log("Work total: " + work());
+};
+
+// Question 3
+function schedule() {
+  let full = confirm('Is the class full? "Ok" for "Yes", "Cancel" for "No"');
+  let conflict = confirm(
+    'Does this class conflict with your schedule? "Ok" for "Yes", "Cancel" for "No"'
+  );
+
+  if (full === false && conflict === false) {
+    alert("You can attend this class");
+  } else {
+    alert("Sorry you may not attend this class");
+  }
+}
+document.getElementById("buttonThree").onclick = function () {
+    schedule();
+};
+//     -A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.  Premium members do not need to buy a specific amount of products.
+
+// Question 4
+
+function discount() {
+  let premium = confirm(
+    'Are you a Premium member? "Ok" for "Yes", "Cancel" for "No"'
+  );
+  let itemsPurchases = prompt("How many items did you purchase?");
+
+  if (premium === true || Number(itemsPurchases) > 2) {
+    alert("Please enjoy your discount");
+  } else {
+    alert(
+      "Please become a member or purchase more than 2 items to enjoy the discount"
+    );
+  }
+}
+document.getElementById("buttonFour").onclick = function () {
+    discount();
+};
+
