@@ -76,10 +76,7 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 function calculateTip(x, y) {
-       let billTotal = x;
-       let tipTotal = y;
-       return alert("Your total Tip should be $" + (billTotal * tipTotal))
-        
+       return alert("Your total Tip should be $" + (x * y))
 }
 
 let total = parseFloat(prompt("How much was your dinner bill?"));

@@ -71,7 +71,7 @@ function discount() {
   );
   let itemsPurchases = prompt("How many items did you purchase?");
 
-  if ((premium === true || Number(itemsPurchases) > 2) && offer === true) {
+  if ((premium === true || parseFloat(itemsPurchases) > 2) && offer === true) {
     alert("Please enjoy your discount");
   } else {
     alert(
