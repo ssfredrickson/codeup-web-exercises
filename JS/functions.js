@@ -10,9 +10,9 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-  name = "Hello, " + name;
-  return name;
+  return "Hello, " + name;
 }
+
 
 /**
  * ! Solution Below
