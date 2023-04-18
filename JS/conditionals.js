@@ -192,7 +192,7 @@ calculatedTotal(luckyNumber, basketTotal);
 
 let response = confirm("Would you like to enter a number?");
 if (response === true) {
-  let number = parseFloat(prompt("Please choose a number."));
+  let number = parseFloat(("Please choose a number."));
   if (isNaN(number)) {
     alert("Im sorry please enter a number.");
   } else {
