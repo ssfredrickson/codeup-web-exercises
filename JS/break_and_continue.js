@@ -7,15 +7,15 @@ function oddNumber() {
       prompt(
         "Give me an odd number between 1 and 50. Dont mess around! I'm crazy and I'll keep asking."
       )
+
     );
   }
   alert("Thank you!");
+  return number
 }
 
-oddNumber();
-
 function skipNumber() {
-  userNumber = parseFloat(prompt("Please give me a number between 1 and 50 to skip."));
+  userNumber = oddNumber()
   console.log(`Number to skip is ${userNumber}`);
   for (let i = 0; i < 50; i++) {
     if (i === userNumber) {
