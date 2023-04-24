@@ -13,6 +13,7 @@
    * array.
    */
   console.log(names.length);
+
   console.log("================================================");
 
   /**
@@ -72,8 +73,7 @@
   second([1, 2, 3, 4, 5]);
 
   function last(x) {
-    console.log(x[4]);
-    return x[4];
+      return console.log(x[x.length -1]);
   }
-  last([1, 2, 3, 4, 5]);
+  last(names);
 })();
