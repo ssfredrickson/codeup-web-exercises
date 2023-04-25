@@ -29,7 +29,11 @@
     // * Create another string that would display your planets in an undordered
     // * list. You will need an opening AND closing <ul> tags around the entire
     // * string, and <li> tags around each planet.
+
+
     let planetsList = "<ul><li>Mercury</li><li>Venus</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>"
+
+
     document.getElementById("planets-ul").innerHTML = planetsList
 
 
