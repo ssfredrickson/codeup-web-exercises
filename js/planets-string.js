@@ -1,8 +1,8 @@
 (function(){
     "use strict";
 
-    var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    var planetsArray;
+    let planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
+    let planetsArray = planetsString.split('|')
 
     /**
      * TODO:
@@ -10,11 +10,10 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-    let planets = planetsString.split('|')
-    planetsArray = Array.of(planets)
-    console.log(planetsArray);
 
-    console.log("-----------------------------------------");
+
+
+
     /**
      * TODO:
      * Create a string with <br> tags between each planet. console.log() your
@@ -22,8 +21,8 @@
      *
      *
      * */
-    let breakPlanets = "Mercury<br>Venus<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune<br>"
-    document.getElementById("planets").innerHTML = breakPlanets
+    let brPlanets = planetsArray.join('<br>')
+    document.getElementById("planets").innerHTML = brPlanets
 
 // * BONUS:
     // * Create another string that would display your planets in an undordered
@@ -31,7 +30,7 @@
     // * string, and <li> tags around each planet.
 
 
-    let planetsList = "<ul><li>Mercury</li><li>Venus</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>"
+    let planetsList = "<ul><li>" + planetsArray.join('</li><li>') + "</li></ul>"
 
 
     document.getElementById("planets-ul").innerHTML = planetsList
