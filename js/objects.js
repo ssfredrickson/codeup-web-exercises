@@ -54,7 +54,7 @@
   ];
 
   let discount = function () {
-    if (this.amount >= 200) {
+    if (this.amount > 200) {
       return console.log(
         `Thank you ${this.name} for spending $${
           this.amount
@@ -131,7 +131,20 @@
   console.log(books[0].author.lastName);
 
   console.log("-------------------------");
+
+  function showBookInfo(book) {
+    console.log(`Book # ${books.indexOf(book) + 1}`);
+    console.log(`Title: ${book.title}`);
+    console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+    console.log("-----");
+  }
+  books.forEach(function (book) {
+    showBookInfo(book);
+  });
   /**
+   *
+   *
+   *
    * TODO:
    * Loop through the books array and output the following information about
    * each book:
@@ -166,13 +179,14 @@
    *   outputs the information described above. Refactor your loop to use your
    *   `showBookInfo` function.
    */
+
+  console.log("----------  Add Book Below and update ----------");
   let createBook = function (title, authorFirst, authorLast) {
     let book = new Object();
     book.title = title;
     book.author = new Object();
     book.author.firstName = authorFirst;
     book.author.lastName = authorLast;
-    console.log(book);
     return book;
   };
   books.createBook = createBook;
@@ -184,8 +198,6 @@
       prompt("Please enter the author's last name.")
     )
   );
-
-  console.log(books);
 
   books.forEach(function (book) {
     function showBookInfo(book) {
