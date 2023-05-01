@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register With Us</title>
+  </head>
+  <body>
+    <form
+      action="https://request-inspector.glitch.me/"
+      method="post"
+      id="info-form"
+    >
+      <div id="form-email">
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+        />
+      </div>
+      <div id="form-password">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <div class="form-bio">
+        <label for="bio">Bio:</label>
+        <textarea
+          name="bio"
+          id="bio"
+          placeholder="Please describe yourself"
+        ></textarea>
+      </div>
+      <div class="form-radio">
+        Billboard
+        <label for="radio-billboard"></label
+        ><input
+          type="radio"
+          name="radio-billboard"
+          id="radio-billboard"
+        /><br />
+        Radio Advertisement
+        <label for="radio-radio"></label
+        ><input type="radio" name="radio-radio" id="radio-radio" /><br />
+        Internet Advertisement
+        <label for="radio-internet"></label
+        ><input type="radio" name="radio-internet" id="radio-internet" /><br />
+        Other <label for="radio-other"></label
+        ><input type="radio" name="radio-other" id="radio-other" />
+      </div>
+      <div>
+        <label for="browser">Favorite Browser:</label>
+        <select name="browser" id="browser" form="info-form">
+          <option value="chrome">Chrome</option>
+          <option value="firefox">Firefox</option>
+          <option value="edge">Edge</option>
+          <option value="brave">Brave</option>
+        </select>
+      </div>
+      <button type="submit" style="background-color: crimson">Submit</button>
+    </form>
+  </body>
+</html>
