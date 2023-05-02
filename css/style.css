@@ -1,0 +1,37 @@
+* {
+    font-family: Poppins;
+}
+
+body {
+    background-image: url('../images/flowers.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: darkgrey;
+}
+
+.fancy-header {
+    text-align: center;
+}
+
+h1, h3 {
+    text-decoration: underline;
+    color: #6f061b;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+a {
+    border-radius: 5px;
+    background-color: #6f061b;
+    padding: 5px;
+    color: darkgrey;
+}
+
+a:hover {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
