@@ -3,24 +3,105 @@
 }
 
 body {
-    background-image: url('../images/flowers.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-color: darkgrey;
+    background-image: url('../images/tech_background.jpg');
+}
+
+#nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+    background-color: #6f061b;
+    text-align: center;
+    width: 100%;
+}
+
+#nav-bar > li {
+    display: inline;
+    border-radius: 5px;
+
+
 }
 
 .fancy-header {
     text-align: center;
 }
 
-h1, h3 {
+.fancy-p {
+    text-align: center;
+}
+
+h1, h2, h3 {
     text-decoration: underline;
     color: #6f061b;
 }
 
-ul {
+#list {
+    clear: both;
+}
+
+.lists {
+    width: auto;
+
+}
+
+ul, ol {
     list-style-type: circle;
+
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.pics-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-items: center;
+    align-items: stretch;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 50px 50px;
+
+
+
+}
+
+.pics-container > img {
+    object-fit: cover;
+    width: 90%;
+}
+
+img {
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    border-radius: 5px;
+    display: inline-grid;
+
+
+}
+
+.table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #6f061b;
+    color: darkgrey;
 }
 
 a {
@@ -28,10 +109,26 @@ a {
     background-color: #6f061b;
     padding: 5px;
     color: darkgrey;
+    text-decoration: none;
+    text-align: center;
 }
 
 a:hover {
     border-radius: 5px;
+    font-size: larger;
     padding: 10px;
     margin-bottom: 10px;
+    background-color: darkgrey;
+    color: #6f061b;
+}
+
+#footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: stretch;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
 }
