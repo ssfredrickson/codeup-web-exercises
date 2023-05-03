@@ -34,24 +34,21 @@
 
 // Write a function that takes in a string and counts the instances of the letter 'e' within the argument. The count should be case insensitive. If the string does not contain any 'e's it should return 0. If the argument is not a string it should return false.
 
-function countEs(x) {
-    if (typeof x === "string") {
-        let count = 0;
-        let normalizedStr = x.toLowerCase();
-        for (let i = 0; i < x.length; i++) {
-            if (normalizedStr.charAt(i) === "e") {
-                count++;
-            }
-        }
-        return count;
-    } else {
-        return false;
+function areThereEs(x) {
+  if (typeof x === "string") {
+    for (let i = 0; i < x.length; i++) {
+      if (x.toLowerCase(x.charAt(i) === "e")) {
+        return true;
+      }
     }
+  } else {
+    return false;
+  }
 }
 
-console.log(countEs("Ease")); // returns 2;
-console.log(countEs("teleconference")); // returns 5;
-console.log(countEs("TOM")); // returns 0;
-console.log(countEs(true)); // returns false;
-console.log(countEs(["e", "E"])); // returns false;
-console.log(countEs()); // returns false;
+console.log(areThereEs("Ease")); // returns 2;
+console.log(areThereEs("teleconference")); // returns 5;
+console.log(areThereEs("TOM")); // returns 0;
+console.log(areThereEs(true)); // returns false;
+console.log(areThereEs(["e", "E"])); // returns false;
+console.log(areThereEs()); // returns false;
