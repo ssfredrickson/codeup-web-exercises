@@ -1,3 +1,14 @@
+/*Color Variables*/
+
+:root {
+    --success-message-color: #cff3da;
+    --info-message-color: #cddeff;
+    --warning-message-color: #fcfbc9;
+    --error-message-color: #fad3d7;
+}
+
+/*----------------------------------*/
+
 body,
 html {
   height: 100%;
@@ -19,7 +30,7 @@ div {
 .message.message-info {
   display: flex;
   align-items: center;
-  background-color: #cddeff;
+  background-color: var(--info-message-color);
   color: #3f3697;
   font-size: 0.75em;
 }
@@ -27,7 +38,7 @@ div {
 .message.message-success {
   display: flex;
   align-items: center;
-  background-color: #cff3da;
+  background-color: var(--success-message-color);
   color: #307946;
   font-size: 0.75em;
 }
@@ -35,7 +46,7 @@ div {
 .message.message-warning {
   display: flex;
   align-items: center;
-  background-color: #fcfbc9;
+  background-color: var(--warning-message-color);
   color: #887514;
   font-size: 0.75em;
 }
@@ -43,7 +54,7 @@ div {
 .message.message-error {
   display: flex;
   align-items: center;
-  background-color: #fad3d7;
+  background-color: var(--error-message-color);
   color: #913147;
   font-size: 0.75em;
 }

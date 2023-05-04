@@ -34,21 +34,38 @@
 
 // Write a function that takes in a string and counts the instances of the letter 'e' within the argument. The count should be case insensitive. If the string does not contain any 'e's it should return 0. If the argument is not a string it should return false.
 
-function areThereEs(x) {
-  if (typeof x === "string") {
-    for (let i = 0; i < x.length; i++) {
-      if (x.toLowerCase(x.charAt(i) === "e")) {
-        return true;
-      }
-    }
-  } else {
-    return false;
+// function areThereEs(x) {
+//   if (typeof x === "string") {
+//     for (let i = 0; i < x.length; i++) {
+//       if (x.toLowerCase(x.charAt(i) === "e")) {
+//         return true;
+//       }
+//     }
+//   } else {
+//     return false;
+//   }
+// }
+//
+// console.log(areThereEs("Ease")); // returns 2;
+// console.log(areThereEs("teleconference")); // returns 5;
+// console.log(areThereEs("TOM")); // returns 0;
+// console.log(areThereEs(true)); // returns false;
+// console.log(areThereEs(["e", "E"])); // returns false;
+// console.log(areThereEs()); // returns false;
+
+
+// Write a function named fizzBuzz that prints to the console the number 1 - 100. If the number is divisible by 3 print fizz instead of the number. If the number is divisible by 5 print buzz. If the number is divisible by both 3 and 5 print fizzBuzz.
+
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+       console.log("fizzbuzz")
+    }else if (i % 5 === 0){
+       console.log("buzz");
+    }else if (i % 3 === 0){
+       console.log("fizz")
+    }else console.log(i)
   }
 }
 
-console.log(areThereEs("Ease")); // returns 2;
-console.log(areThereEs("teleconference")); // returns 5;
-console.log(areThereEs("TOM")); // returns 0;
-console.log(areThereEs(true)); // returns false;
-console.log(areThereEs(["e", "E"])); // returns false;
-console.log(areThereEs()); // returns false;
+fizzBuzz()
