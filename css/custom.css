@@ -1,0 +1,39 @@
+
+
+body {
+  background-color: #ffc107;
+}
+
+.logo {
+    border-radius: 3px;
+}
+
+.jumbotron h1 {
+  background-color: #0d6efd;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  opacity: 0.75;
+  color: #ffc107;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/pizza.png");
+  height: 346px;
+  background-size: cover;
+}
+
+h1 {
+  background-color: #0d6efd;
+
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  color: #ffc107;
+}
+
