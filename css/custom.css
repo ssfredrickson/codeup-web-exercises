@@ -1,11 +1,5 @@
-
-
 body {
   background-color: #ffc107;
-}
-
-.logo {
-    border-radius: 3px;
 }
 
 .jumbotron h1 {
@@ -35,5 +29,14 @@ h1 {
   text-align: center;
 
   color: #ffc107;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  color: #ffc107;
+  background-color: #0d6efd;
+}
+
+#pizzaSize, #quantity {
+  height: 25px;
 }
 
