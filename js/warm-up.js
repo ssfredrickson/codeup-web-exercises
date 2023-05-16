@@ -93,27 +93,128 @@
 // console.log(addEmUp([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // returns 55
 // console.log(addEmUp([-13, -92, -3500])); // returns -3605
 
-
 // Write a function that takes in a string and returns an object describing the string. The object should have a string property that contains the original string, a numberOfEs property that contains a count of the number of e's in the string (case-insensitive), and a isEvenLength property that contains a boolean for whether the string's length is even or not.
-function countE(x) {
-   {
+// function countE(x) {
+//    {
+//
+//     return ((x.match(/e/g) || []).length)
+//   }
+// }
+//
+//
+// function explainString(x) {
+//   if (typeof x === "string" ) {
+//     string = {
+//       string: x,
+//       numberOfEs: countE(x),
+//       isEvenLength: x.length % 2 === 0
+//     }
+//   }return string
+//
+// }
+//
+// console.log(explainString("cheese"));
+// // returns {string: "cheese", numberOfEs: 3, isEvenLength: true}
+// console.log(explainString("dog")) ;// returns {string: "dog", numberOfEs: 0, isEvenLength: false}
 
-    return ((x.match(/e/g) || []).length)
-  }
+// -------------------------------------------
+
+// Write a function that takes in an array of objects and returns an array containing all of the names from the original array.
+
+const hamsters = [
+  {
+    name: "Hamtaro",
+    heightInMM: 86,
+    fur: ["orange", "white"],
+    gender: "male",
+    dateOfBirth: "August 6",
+  },
+  {
+    name: "Bijou",
+    heightInMM: 75,
+    fur: ["white"],
+    gender: "female",
+    dateOfBirth: "July 10",
+  },
+  {
+    name: "Oxnard",
+    heightInMM: 100,
+    fur: ["grey", "white"],
+    gender: "male",
+    dateOfBirth: "May 3",
+  },
+  {
+    name: "Boss",
+    heightInMM: 120,
+    fur: ["brown", "white"],
+    gender: "male",
+    dateOfBirth: "September 21",
+  },
+  {
+    name: "Snoozer",
+    heightInMM: 85,
+    fur: ["brown", "white", "pink"],
+    gender: "male",
+    dateOfBirth: "January 14",
+  },
+];
+
+// function extractNames(array) {
+//     let values = [];
+//     for(let i = 0; i < array.length; i++) {
+//         values.push(array[i].name)
+//     }
+//     return values
+//
+// }
+
+// console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
+
+const getTallest = function (arr) {
+  arr.sort(function (a, b) {
+    if (a.heightInMM < b.heightInMM) return 1;
+    if (a.heightInMM > b.heightInMM) return -1;
+    return 0;
+  });
+  return arr[0];
+};
+
+console.log(getTallest(hamsters)); // returns {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"}
+
+// function largestHamster(x) {
+//     let hamster = [];
+//     x.forEach(function(el) {
+//         hamster.push({
+//             height: el.heightInMM,
+//             name: el.name,
+//         })
+//         return console.log(hamster.sort());
+//     })
+//     return console.log(hamster[0])
+// }
+//
+// largestHamster(hamsters)
+
+// function add(a, b = 3) {
+//     const total = a + b;
+//     return total
+// }
+
+
+
+
+// Write a function that takes in an array of objects and returns an array of the objects from the array that only have one fur color.
+
+function singleFurColor(arr) {
+    let oneColorHamster = []
+    arr.forEach(function(color) {
+        if (color.fur.length == 1) {
+            oneColorHamster.push(color)
+        }
+    });
+
+    return oneColorHamster
+
 }
 
-
-function explainString(x) {
-  if (typeof x === "string" ) {
-    string = {
-      string: x,
-      numberOfEs: countE(x),
-      isEvenLength: x.length % 2 === 0
-    }
-  }return string
-
-}
-
-console.log(explainString("cheese"));
-// returns {string: "cheese", numberOfEs: 3, isEvenLength: true}
-console.log(explainString("dog")) ;// returns {string: "dog", numberOfEs: 0, isEvenLength: false}
+console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 75, fur: ['white'], gender: "female", dateOfBirth: "July 10"}];
