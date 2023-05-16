@@ -202,6 +202,25 @@ console.log(getTallest(hamsters)); // returns {name: "Boss", heightInMM: 120, fu
 
 
 
+function genderArrays(arr) {
+    let ladyHamsters = [];
+    let boyHamsters = [];
+    arr.forEach(function(obj) {
+        if (obj.gender.toLowerCase() === "male") {
+            ladyHamsters.push(obj)
+        } else {boyHamsters.push(obj)}
+    })
+    return console.log(ladyHamsters, boyHamsters)
+}
+
+
+genderArrays(hamsters)
+
+
+
+
+
+
 
 // Write a function that takes in an array of objects and returns an array of the objects from the array that only have one fur color.
 
