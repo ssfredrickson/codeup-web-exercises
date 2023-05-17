@@ -32,7 +32,7 @@
 
 // ---------------------------------------
 
-// Write a function that takes in a string and counts the instances of the letter 'e' within the argument. The count should be case insensitive. If the string does not contain any 'e's it should return 0. If the argument is not a string it should return false.
+// Write a function that takes in a string and counts the instances of the letter 'e' within the argument. The count should be case-insensitive. If the string does not contain any 'e's it should return 0. If the argument is not a string it should return false.
 
 // function areThereEs(x) {
 //   if (typeof x === "string") {
@@ -170,16 +170,16 @@ const hamsters = [
 
 // console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
 
-const getTallest = function (arr) {
-  arr.sort(function (a, b) {
-    if (a.heightInMM < b.heightInMM) return 1;
-    if (a.heightInMM > b.heightInMM) return -1;
-    return 0;
-  });
-  return arr[0];
-};
+// const getTallest = function (arr) {
+//   arr.sort(function (a, b) {
+//     if (a.heightInMM < b.heightInMM) return 1;
+//     if (a.heightInMM > b.heightInMM) return -1;
+//     return 0;
+//   });
+//   return arr[0];
+// };
 
-console.log(getTallest(hamsters)); // returns {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"}
+// console.log(getTallest(hamsters)); // returns {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"}
 
 // function largestHamster(x) {
 //     let hamster = [];
@@ -202,19 +202,19 @@ console.log(getTallest(hamsters)); // returns {name: "Boss", heightInMM: 120, fu
 
 
 
-function genderArrays(arr) {
-    let ladyHamsters = [];
-    let boyHamsters = [];
-    arr.forEach(function(obj) {
-        if (obj.gender.toLowerCase() === "male") {
-            ladyHamsters.push(obj)
-        } else {boyHamsters.push(obj)}
-    })
-    return console.log(ladyHamsters, boyHamsters)
-}
-
-
-genderArrays(hamsters)
+// function genderArrays(arr) {
+//     let ladyHamsters = [];
+//     let boyHamsters = [];
+//     arr.forEach(function(obj) {
+//         if (obj.gender.toLowerCase() === "male") {
+//             ladyHamsters.push(obj)
+//         } else {boyHamsters.push(obj)}
+//     })
+//     return console.log(ladyHamsters, boyHamsters)
+// }
+//
+//
+// genderArrays(hamsters)
 
 
 
@@ -224,16 +224,32 @@ genderArrays(hamsters)
 
 // Write a function that takes in an array of objects and returns an array of the objects from the array that only have one fur color.
 
-function singleFurColor(arr) {
-    let oneColorHamster = []
-    arr.forEach(function(color) {
-        if (color.fur.length == 1) {
-            oneColorHamster.push(color)
-        }
-    });
+// function singleFurColor(arr) {
+//     let oneColorHamster = []
+//     arr.forEach(function(color) {
+//         if (color.fur.length == 1) {
+//             oneColorHamster.push(color)
+//         }
+//     });
+//
+//     return oneColorHamster
+//
+// }
+//
+// console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 75, fur: ['white'], gender: "female", dateOfBirth: "July 10"}];
 
-    return oneColorHamster
 
+
+// Write a function that takes in an array of objects and returns the object with the most colors in the fur array.
+
+function mostColorful(arr) {
+  let mostColors = {fur: []};
+  arr.forEach(function(obj) {
+    if (obj.fur.length > mostColors.fur.length) {
+      mostColors = obj;
+    }
+  });
+  return mostColors;
 }
 
-console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 75, fur: ['white'], gender: "female", dateOfBirth: "July 10"}];
+console.log(mostColorful(hamsters)); // returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"};
