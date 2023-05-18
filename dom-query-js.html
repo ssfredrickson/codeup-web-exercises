@@ -73,26 +73,26 @@
 
         let changeItems = () => {
           for (let i = 0; i < listItems.length; i++) {
-            if (i % 2 === 0) {
+            if (i % 2 !== 0) {
               listItems[i].style.color = "grey";
             }
             if (listItems[i].getAttribute("data-dbid") === "1") {
               listItems[i].style.color = "blue";
             }
-          }}
+          }
+        };
 
         document.getElementById("btn-3").addEventListener("click", changeItems);
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-
-
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let subParagraphs = document.querySelectorAll(".sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        let changePText = () => subParagraphs[0].innerText = "Mission Accomplished";
-        document.getElementById("btn-4").addEventListener("click", changePText)
+        let changePText = () =>
+          (subParagraphs[0].innerText = "Mission Accomplished");
+        document.getElementById("btn-4").addEventListener("click", changePText);
       })();
     </script>
   </body>

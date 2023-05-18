@@ -242,14 +242,45 @@ const hamsters = [
 
 // Write a function that takes in an array of objects and returns the object with the most colors in the fur array.
 
-function mostColorful(arr) {
-  let mostColors = {fur: []};
-  arr.forEach(function(obj) {
-    if (obj.fur.length > mostColors.fur.length) {
-      mostColors = obj;
+// function mostColorful(arr) {
+//   let mostColors = {fur: []};
+//   arr.forEach(function(obj) {
+//     if (obj.fur.length > mostColors.fur.length) {
+//       mostColors = obj;
+//     }
+//   });
+//   return mostColors;
+// }
+//
+// console.log(mostColorful(hamsters)); // returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"};
+
+
+function describeNumber(x) {
+  if (typeof x !== "number") {
+    return  console.log("please enter a number")
+  } else {
+    let numObj = {
+      number: x,
+      evenOrOdd: "",
+      factors: [],
+      numberOfDigits: 0,
     }
-  });
-  return mostColors;
+    if (x % 2 === 0 ) {
+      numObj.evenOrOdd = "even"
+    } else numObj.evenOrOdd = "odd"
+
+    for (let i = 1; i <= x; i++) {
+      if(x % i === 0) {
+        numObj.factors.push(i)
+      }
+    }
+    function getLength(x) {
+      numObj.numberOfDigits = x.toString().length
+    }
+    getLength(x)
+    return numObj
+  }
+
 }
 
-console.log(mostColorful(hamsters)); // returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"};
+console.log(describeNumber(19))
