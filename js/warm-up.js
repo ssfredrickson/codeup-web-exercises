@@ -255,32 +255,47 @@ const hamsters = [
 // console.log(mostColorful(hamsters)); // returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"};
 
 
-function describeNumber(x) {
-  if (typeof x !== "number") {
-    return  console.log("please enter a number")
-  } else {
-    let numObj = {
-      number: x,
-      evenOrOdd: "",
-      factors: [],
-      numberOfDigits: 0,
-    }
-    if (x % 2 === 0 ) {
-      numObj.evenOrOdd = "even"
-    } else numObj.evenOrOdd = "odd"
+// function describeNumber(x) {
+//   if (typeof x !== "number") {
+//     return  console.log("please enter a number")
+//   } else {
+//     let numObj = {
+//       number: x,
+//       evenOrOdd: "",
+//       factors: [],
+//       numberOfDigits: 0,
+//     }
+//     if (x % 2 === 0 ) {
+//       numObj.evenOrOdd = "even"
+//     } else numObj.evenOrOdd = "odd"
+//
+//     for (let i = 1; i <= x; i++) {
+//       if(x % i === 0) {
+//         numObj.factors.push(i)
+//       }
+//     }
+//     function getLength(x) {
+//       numObj.numberOfDigits = x.toString().length
+//     }
+//     getLength(x)
+//     return numObj
+//   }
+//
+// }
 
-    for (let i = 1; i <= x; i++) {
-      if(x % i === 0) {
-        numObj.factors.push(i)
-      }
-    }
-    function getLength(x) {
-      numObj.numberOfDigits = x.toString().length
-    }
-    getLength(x)
-    return numObj
-  }
+// console.log(describeNumber(19))
 
+// Write a JavaScript function that takes in an array of numbers and returns an array of the same length where all of the numbers have been replaced with the number multiplied by 3.
+
+function multiplyElementsByThree(x) {
+  let newArr = []
+  x.forEach(function (item) {
+    newArr.push(item * 3)
+  })
+  return newArr
 }
 
-console.log(describeNumber(19))
+console.log(multiplyElementsByThree([3,4,5])); // returns [9, 12, 15];
+console.log(multiplyElementsByThree([12,8])); // returns [36, 24];
+console.log(multiplyElementsByThree([100])); // returns [300];
+console.log(multiplyElementsByThree([15, 9, 33, 16, 50])); // returns [45, 27, 99, 48, 150];
