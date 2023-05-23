@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.5"
+    "bootstrap-icons": "^1.10.5",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "eslint": "^8.40.0"
