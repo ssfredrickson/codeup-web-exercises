@@ -121,43 +121,43 @@
 
 // Write a function that takes in an array of objects and returns an array containing all of the names from the original array.
 
-const hamsters = [
-  {
-    name: "Hamtaro",
-    heightInMM: 86,
-    fur: ["orange", "white"],
-    gender: "male",
-    dateOfBirth: "August 6",
-  },
-  {
-    name: "Bijou",
-    heightInMM: 75,
-    fur: ["white"],
-    gender: "female",
-    dateOfBirth: "July 10",
-  },
-  {
-    name: "Oxnard",
-    heightInMM: 100,
-    fur: ["grey", "white"],
-    gender: "male",
-    dateOfBirth: "May 3",
-  },
-  {
-    name: "Boss",
-    heightInMM: 120,
-    fur: ["brown", "white"],
-    gender: "male",
-    dateOfBirth: "September 21",
-  },
-  {
-    name: "Snoozer",
-    heightInMM: 85,
-    fur: ["brown", "white", "pink"],
-    gender: "male",
-    dateOfBirth: "January 14",
-  },
-];
+// const hamsters = [
+//   {
+//     name: "Hamtaro",
+//     heightInMM: 86,
+//     fur: ["orange", "white"],
+//     gender: "male",
+//     dateOfBirth: "August 6",
+//   },
+//   {
+//     name: "Bijou",
+//     heightInMM: 75,
+//     fur: ["white"],
+//     gender: "female",
+//     dateOfBirth: "July 10",
+//   },
+//   {
+//     name: "Oxnard",
+//     heightInMM: 100,
+//     fur: ["grey", "white"],
+//     gender: "male",
+//     dateOfBirth: "May 3",
+//   },
+//   {
+//     name: "Boss",
+//     heightInMM: 120,
+//     fur: ["brown", "white"],
+//     gender: "male",
+//     dateOfBirth: "September 21",
+//   },
+//   {
+//     name: "Snoozer",
+//     heightInMM: 85,
+//     fur: ["brown", "white", "pink"],
+//     gender: "male",
+//     dateOfBirth: "January 14",
+//   },
+// ];
 
 // function extractNames(array) {
 //     let values = [];
@@ -287,15 +287,15 @@ const hamsters = [
 
 // Write a JavaScript function that takes in an array of numbers and returns an array of the same length where all of the numbers have been replaced with the number multiplied by 3.
 
-function multiplyElementsByThree(x) {
-  let newArr = []
-  x.forEach(function (item) {
-    newArr.push(item * 3)
-  })
-  return newArr
-}
-
-console.log(multiplyElementsByThree([3,4,5])); // returns [9, 12, 15];
-console.log(multiplyElementsByThree([12,8])); // returns [36, 24];
-console.log(multiplyElementsByThree([100])); // returns [300];
-console.log(multiplyElementsByThree([15, 9, 33, 16, 50])); // returns [45, 27, 99, 48, 150];
+// function multiplyElementsByThree(x) {
+//   let newArr = []
+//   x.forEach(function (item) {
+//     newArr.push(item * 3)
+//   })
+//   return newArr
+// }
+//
+// console.log(multiplyElementsByThree([3,4,5])); // returns [9, 12, 15];
+// console.log(multiplyElementsByThree([12,8])); // returns [36, 24];
+// console.log(multiplyElementsByThree([100])); // returns [300];
+// console.log(multiplyElementsByThree([15, 9, 33, 16, 50])); // returns [45, 27, 99, 48, 150];
