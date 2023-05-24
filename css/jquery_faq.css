@@ -1,0 +1,38 @@
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    color: whitesmoke;
+}
+
+body {
+    background: #141313;
+    color: #DDDDDD;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: #DDDDDD;
+    text-align: center;
+    clear: both;
+}
+
+.colorText{
+    color: #0d6efd;
+}
+
+button {
+    background: #e26817;
+    color: #141313;
+    height: 3em;
+    width: 5em;
+    margin: 2em;
+}
+
+
+
