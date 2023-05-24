@@ -7,15 +7,22 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="css/jquery_faq.css" />
     <title>Document</title>
   </head>
   <body>
-  <div id="header">
-  <button id="show-faqs">Show FAQs</button>
-  <h1>National Park FAQs</h1>
-  <button id="hide-faqs">Hide FAQs</button>
-  </div>
+    <div id="header">
+      <button id="show-faqs">Show FAQs</button>
+      <h1>National Park FAQs</h1>
+      <button id="hide-faqs">Hide FAQs</button>
+    </div>
 
     <dl>
       <dt class="highlight">
@@ -28,9 +35,11 @@
         <p>What government agency oversees the National Park Service?</p>
       </dt>
       <dd class="invisible colorText">
-        <p> National Park Service is a bureau of the Department of the Interior.
-        Directly overseeing its operation is the department's Assistant
-        Secretary for Fish, Wildlife and Parks.</p>
+        <p>
+          National Park Service is a bureau of the Department of the Interior.
+          Directly overseeing its operation is the department's Assistant
+          Secretary for Fish, Wildlife and Parks.
+        </p>
       </dd>
       <dt class="highlight">
         <p>How many employees are in the National Park Service?</p>
@@ -45,31 +54,59 @@
       </dd>
       <dt class="highlight"><p>How old is the National Park System?</p></dt>
       <dd class="invisible colorText">
-        <p>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park.</p>
+        <p>
+          The National Park Service was created by an act signed by President
+          Woodrow Wilson on August 25, 1916. Yellowstone National Park was
+          established by an act signed by President Ulysses S. Grant on March 1,
+          1872, as the nation's first national park.
+        </p>
       </dd>
       <dt class="highlight">
         What is the origin of the National Park Service arrowhead?
       </dt>
       <dd class="invisible colorText">
-        <p>The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951. The components of the arrowhead may have been inspired by key attributes of the National Park System, with the sequoia tree and bison representing vegetation and wildlife, the mountains and water representing scenic and recreational values, and the arrowhead itself representing historical and archeological values.</p>
+        <p>
+          The arrowhead was authorized as the official National Park Service
+          emblem by the Secretary of the Interior on July 20, 1951. The
+          components of the arrowhead may have been inspired by key attributes
+          of the National Park System, with the sequoia tree and bison
+          representing vegetation and wildlife, the mountains and water
+          representing scenic and recreational values, and the arrowhead itself
+          representing historical and archeological values.
+        </p>
       </dd>
       <dt class="highlight">How many areas are in the National Park System?</dt>
       <dd class="invisible colorText">
-        <p>The system includes 424 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments, battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic rivers and trails, and the White House.</p>
+        <p>
+          The system includes 424 areas covering more than 85 million acres in
+          every state, the District of Columbia, American Samoa, Guam, Puerto
+          Rico, and the Virgin Islands. These areas include national parks,
+          monuments, battlefields, military parks, historical parks, historic
+          sites, lakeshores, seashores, recreation areas, scenic rivers and
+          trails, and the White House.
+        </p>
       </dd>
       <dt class="highlight">
         What is the largest national park site? Smallest?
       </dt>
       <dd class="invisible colorText">
         <ul>
-          <li>Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</li>
-          <li>Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</li>
+          <li>
+            Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2
+            million acres
+          </li>
+          <li>
+            Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres
+          </li>
         </ul>
       </dd>
       <dt class="highlight">How many people visit the national parks?</dt>
       <dd class="invisible colorText">
         <ul>
-          <li>In 2022, the total number of recreation visits to the national parks was 311,985,998.</li>
+          <li>
+            In 2022, the total number of recreation visits to the national parks
+            was 311,985,998.
+          </li>
         </ul>
       </dd>
       <dt class="highlight">What is the National Park Service budget?</dt>
@@ -83,11 +120,58 @@
       </dd>
       <dt class="highlight">How do I obtain a park entrance pass?</dt>
       <dd class="invisible colorText">
-        <p>Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee. Entrance fee sites have passes available; we recommend calling a park prior to your visit. (See the park search to locate a specific park.) There are a number of entrance passes available, including park-specific passes as well as passes that offer entrance to more than 2,000 federal recreation sites in addition to the national parks (Annual, Military, Senior, 4th Grade, Access, and Volunteer passes).</p>
+        <p>
+          Fewer than one-third of the national parks charge entrance fees. You
+          can obtain park entrance passes by visiting a park site that charges
+          an entrance fee. Entrance fee sites have passes available; we
+          recommend calling a park prior to your visit. (See the park search to
+          locate a specific park.) There are a number of entrance passes
+          available, including park-specific passes as well as passes that offer
+          entrance to more than 2,000 federal recreation sites in addition to
+          the national parks (Annual, Military, Senior, 4th Grade, Access, and
+          Volunteer passes).
+        </p>
       </dd>
     </dl>
 
+    <div id="list-container" class="container">
+      <div class="row">
+        <h1 class="m-2">Interesting Facts</h1><button id="liButton">Highlight Last li</button>
+        <div class="col-4">
+          <h3>Death Valley National Park</h3>
+          <ul id="deathList">
+            <li class="list-item">1</li>
+            <li class="list-item">2</li>
+            <li class="list-item">3</li>
+            <li class="list-item">4</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <h3>Yosemite National Park</h3>
+          <ul id="yosemiteList">
+            <li class="list-item">5</li>
+            <li class="list-item">6</li>
+            <li class="list-item">7</li>
+            <li class="list-item">8</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <h3>Yellowstone National Park</h3>
+          <ul id="yellowstoneList">
+            <li class="list-item">9</li>
+            <li class="list-item">10</li>
+            <li class="list-item">11</li>
+            <li class="list-item">12</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
