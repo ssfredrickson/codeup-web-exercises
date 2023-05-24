@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  padding: 0;
   background-image: radial-gradient(#021027, #000000);
   font-family: "Gloock", serif;
 }
@@ -57,7 +59,7 @@ body {
 .zero-lives {
   z-index: 999;
   margin-top: 10px;
-  animation: blinker 2s linear infinite;
+  animation: blinker 3s linear infinite;
 }
 
 .lives {
@@ -71,6 +73,10 @@ body {
   }
 }
 
+#combatText{
+  margin-top: 15px;
+}
+
 #continue {
   color: #564009;
   margin: 10px;
@@ -78,3 +84,5 @@ body {
   bottom: 20px;
   right: 20px;
 }
+
+
