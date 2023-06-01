@@ -20,15 +20,26 @@
     <link rel="stylesheet" href="/css/mapbox.css" />
   </head>
   <body>
-  <h1>Must visit stops in New Braunfels, TX</h1>
+    <h1>Must visit stops in New Braunfels, TX</h1>
     <div class="card">
-
       <!-- The HTML element that serves as the Mapbox container -->
       <div id="map"></div>
       <div class="card-body d-flex justify-content-center">
         <button id="add-markers" class="btn btn-success">Show Markers</button>
-        <input class="form-control mx-1" type="text" name="name" id="name" placeholder="Name" />
-        <input class="form-control mx-1" type="text" name="zip" id="zip" placeholder="Zip Code" />
+        <input
+          class="form-control mx-1"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+        />
+        <input
+          class="form-control mx-1"
+          type="text"
+          name="zip"
+          id="zip"
+          placeholder="Location"
+        />
         <button id="zip-button" class="btn btn-primary mx-1">Add Marker</button>
         <button id="remove-markers" class="btn btn-danger mx-1">
           Remove Markers

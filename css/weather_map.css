@@ -1,0 +1,28 @@
+
+
+body {
+    background-color: #14caf0;
+}
+
+#map {
+    height: 70vh;
+    width: 100%;
+    margin: auto;
+}
+
+#weather-container {
+    background-color: #212529;
+    height: 25%;
+    width: auto;
+    margin: 2em auto;
+    border-radius: 5px;
+}
+
+.card {
+    color: #14caf0;
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    margin: 10px 5px;
+    padding: 5px;
+}
