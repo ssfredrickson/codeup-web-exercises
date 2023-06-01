@@ -71,7 +71,7 @@
         let milliseconds = (item.dt * 1000)
         if (index % 8 === 0) {
           $("#card-container")
-            .append(`<div class="card col" style="width: 18rem;">
+            .append(`<div class="card col">
   <div class="card-header">
     <h6>${new Date(milliseconds).toDateString()}</h6>
   </div>
@@ -102,7 +102,7 @@
 
     userLocation.then(function (data) {
       marker.setLngLat(data).addTo(map);
-
+      console.log(data)
       map.flyTo({
         center: data,
         essential: true,
