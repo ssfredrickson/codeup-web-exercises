@@ -1,5 +1,7 @@
 (function () {
   "use strict";
+// ------------------Map Starting Coordinates --------------------
+
 
   let myLatLong = [-97.371118, 30.349508];
 
@@ -11,12 +13,16 @@
     zoom: 9, // starting zoom
   });
 
+  // --------------------- Create Draggable Marker ------------------
+
   let updatedCoordinates = [];
   const marker = new mapboxgl.Marker({
     draggable: true,
   })
     .setLngLat(myLatLong)
     .addTo(map);
+
+  // ------------------------- Function #1 Get Weather Data on Load ----------------
 
   $(window).on("load", function () {
     console.log("Function #1");
@@ -52,6 +58,8 @@
     });
   });
 
+  // ------------------------Function #2 Get Weather Data when marker stops dragging -----------
+
   function onDragEnd() {
     updatedCoordinates = [];
     const lngLat = marker.getLngLat();
@@ -65,8 +73,7 @@
       console.log('Function #2');
 
       $("#card-container").empty();
-      $("#header").empty();
-      $("#header").append(`<h1 class="text-info">${data.city.name}</h1>`);
+      $("#header").empty().append(`<h1 class="text-info">${data.city.name}</h1>`);
       data.list.forEach(function (item, index) {
         let milliseconds = (item.dt * 1000)
         if (index % 8 === 0) {
@@ -110,29 +117,29 @@
 
       $.get(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${data[1]}&lon=${data[0]}&units=imperial&appid=${MY_OWM_KEY}`
-      ).done(function (item) {
-        console.log(item);
+      ).done(function (data) {
+        console.log(data);
         $("#card-container").empty();
         $("#header")
           .empty()
-          .append(`<h1 class="text-info">${item.city.name}</h1>`);
+          .append(`<h1 class="text-info">${data.city.name}</h1>`);
 
-        item.list.forEach(function (searchedItem, index) {
-          let milliseconds = (searchedItem.dt * 1000)
+        data.list.forEach(function (item, index) {
+          let milliseconds = (item.dt * 1000)
           if (index % 8 === 0) {
             $("#card-container").append(`<div class="card col">
   <div class="card-header">
     <h6>${new Date(milliseconds).toDateString()}</h6>
   </div>
   <ul class="list-group list-group-flush">
-   <li class="list-group-item">Temp: ${searchedItem.main.temp.toFixed(
+   <li class="list-group-item">Temp: ${item.main.temp.toFixed(
      0
    )}&#8457</li>
-    <li class="list-group-item">Feels Like: ${searchedItem.main.feels_like.toFixed(
+    <li class="list-group-item">Feels Like: ${item.main.feels_like.toFixed(
       0
     )}&#8457</li>
     <li class="list-group-item">Chance of Rain: ${(
-      searchedItem.pop * 100
+      item.pop * 100
     ).toFixed(0)} % </li>
   </ul>
 </div>`);
