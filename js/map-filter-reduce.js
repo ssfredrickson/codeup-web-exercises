@@ -59,19 +59,23 @@
     // -----------------------------------------
 
 
-    const longestEmail = users.reduce((email, person) => {
+    const longestEmail = users.reduce((tempEmail, person) => {
         console.log(person.name);
-        if (person.email.length > email.length) {
-            email = person.email
+        if (person.email.length > tempEmail.length) {
+            tempEmail = person.email
         }
-            return (email)
-    }, '')
+            return (tempEmail)
+    }, " ")
     console.log(longestEmail);
 
     // -----------------------------------------
 
     const instructors = users.reduce((count, person, i) => {
-        return `${count + person.name}${(i === users.length - 2) ? ' and ' : ', '}`
+        if (i === users.length - 2) {
+            return `${count + person.name}${' and '}`
+        } else {
+            return `${count + person.name}${', '}`
+        }
     }, " ").slice(0, -2)
 
 
