@@ -14,7 +14,7 @@
 
   // --------------------- Create Draggable Marker ------------------
 
-  let updatedCoordinates = [];
+
   const marker = new mapboxgl.Marker({
     draggable: true,
   })
@@ -22,7 +22,7 @@
     .addTo(map);
 
 
-  // --------------------function to convert degrees to Cardinal Directions ----------
+  // --------------------Function to convert degrees to Cardinal Directions ----------
 
   function degToCompass(num) {
     var val = Math.floor((num / 22.5) + 0.5);
@@ -73,7 +73,7 @@
   });
 
   // ------------------------Get Weather Data when marker stops dragging update cards -----------
-
+  let updatedCoordinates = [];
   function onDragEnd() {
     updatedCoordinates = [];
     const lngLat = marker.getLngLat();
