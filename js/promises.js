@@ -12,8 +12,8 @@ search.addEventListener("click", function (e) {
     response.json().then((user) => {
         console.log(user);
         let loginDate = new Date(user[0].created_at)
-        $('#result').html(`<h3 class="text-center">${user[0].actor.display_login.toUpperCase()}'s last commit was ${loginDate.toString()}</h3><h3 class="text-center"></h3>`)
-        $('#link').attr('href',  `https://github.com/${name}`)
+        $('#result').html(`<h3 class="text-center my-1">${user[0].actor.display_login.toUpperCase()}'s last commit was ${loginDate.toString()}</h3><h3 class="text-center"></h3>`)
+        $('#link').attr('href',  `https://github.com/${name}`).css('display', 'block')
     })
   );
 });
